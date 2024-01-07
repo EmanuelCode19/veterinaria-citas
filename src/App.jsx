@@ -29,7 +29,7 @@ function App() {
     const pacienteStatusUpdate = pacientes.map( pacienteStatus => {
       if(pacienteStatus.Id === id){
         let diagnostico = prompt('Diagnostico')
-        pacienteStatus.Estado =<span className="color font-bold normal-case text-green-600">Atendido</span>;
+        pacienteStatus.Estado = 'atendido';
         pacienteStatus.Diagnostico = diagnostico.toUpperCase()
       }
       return pacienteStatus

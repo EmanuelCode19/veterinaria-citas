@@ -6,12 +6,10 @@ function Header({pacientes}) {
     pacientes.map(paciente => {
     if(paciente.Estado === 'En espera'){
         count++;
-        console.log(`${count} sin atender`);
     }else{
         countAtendido++;
         count++;
         count = count - 1;
-        console.log(`${countAtendido} atendido`);
          }
         })
 

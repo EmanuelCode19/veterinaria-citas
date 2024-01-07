@@ -47,7 +47,7 @@ const Paciente = ({ paciente, setPaciente,eliminarPaciente,pacienteAtendido }) =
  
       <p className="font-bold mb-3 text-gray-700 uppercase">
         Estado: {""}
-        <span className="color font-bold normal-case text-red-400">{Estado}</span>
+        <span className={Estado === 'En espera' ? 'text-red-600 uppercase' : 'text-green-600 uppercase' }>{Estado}</span>
       </p>
 
       <p className="font-bold mb-3 text-gray-700 uppercase">
