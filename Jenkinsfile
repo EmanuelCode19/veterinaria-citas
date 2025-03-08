@@ -1,7 +1,7 @@
 pipeline{
     agent any
      tools {
-        nodejs 'nodeJS',
+        nodejs 'nodeJS'
     }
      docker {
             image 'cypress/included:14.1.0' 
