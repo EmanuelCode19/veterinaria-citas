@@ -1,12 +1,15 @@
 pipeline{
     agent any
      tools {
-        nodejs 'nodeJS'  
+        nodejs 'nodeJS',
     }
+     docker {
+            image 'cypress/included:14.1.0' 
+        }
     stages{
         stage("getting project"){
             steps{
-                sh "npm i"
+                sh "npm ci"
             }
         }
         stage("building project"){
@@ -16,7 +19,7 @@ pipeline{
         }
         stage("running tests"){
             steps{
-                sh "npx cypress run"
+                sh "npx cypress run --headless"
             }
         }
 
