@@ -6,7 +6,7 @@ pipeline{
     stages{
         stage("getting project"){
             steps{
-                sh "npm ci"
+                sh "npm i"
             }
         }
         stage("building project"){
@@ -16,7 +16,7 @@ pipeline{
         }
         stage("running tests"){
             steps{
-                sh 'docker run --rm -v $(pwd):/e2e -w /e2e cypress/included:14.1.0 npx cypress run --headless'
+                sh 'npx cypress run --headless'
             }
         }
 
