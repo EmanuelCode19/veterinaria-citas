@@ -20,7 +20,7 @@ pipeline{
     }
     post {
         always {
-            mail to: 'emanuel_4554@outlook.com', subject: 'Pipeline Finished', body: 'The pipeline has completed.'
+            echo "El pipeline se ha ejecutado"
         }
         success {
             echo 'El proyecto esta funcionando correctamente'
