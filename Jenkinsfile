@@ -16,7 +16,7 @@ pipeline{
         }
         stage("running tests"){
             steps{
-               sh 'xvfb-run npx cypress run --headless'
+                sh 'docker run --rm -v $(pwd):/e2e -w /e2e cypress/included:14.1.0 npx cypress run --headless'
             }
         }
 
