@@ -1,5 +1,8 @@
 pipeline{
     agent any
+     tools {
+        nodejs 'nodeJS'  
+    }
     stages{
         stage("getting project"){
             steps{
