@@ -19,7 +19,7 @@ const Paciente = ({ paciente, setPaciente,eliminarPaciente,pacienteAtendido }) =
 
 
   return (
-    <div className="mx-5 my-10 bg-white shadow-md px-5 py-10 rounded-xl">
+    <div  className="mx-5 my-10 bg-white shadow-md px-5 py-10 rounded-xl">
       <p className="font-bold mb-3 text-gray-700 uppercase">
         Nombre: {""}
         <span className="font-normal normal-case">{nombre}</span>
