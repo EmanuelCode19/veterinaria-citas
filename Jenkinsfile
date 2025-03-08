@@ -16,7 +16,7 @@ pipeline{
         }
         stage("running tests"){
             steps{
-                sh "npx cypress run --headless"
+               sh 'xvfb-run npx cypress run --headless'
             }
         }
 
