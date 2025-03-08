@@ -15,9 +15,6 @@ pipeline{
             }
         }
         stage("running tests"){
-            agent {
-                docker { image 'cypress/included:14.1.0' }
-            }
             steps{
                 sh "npx cypress run --headless"
             }
